@@ -125,3 +125,17 @@ height: 79px;
   color:white;
  
 }
+
+.hamburgermenu {
+  margin-top: -15px;
+  height: 30px; 
+  width: auto;
+}
+
+.heroName {
+  display: inline-block;
+}
+
+.carouselHero {
+  maxHeight: 100vh
+}

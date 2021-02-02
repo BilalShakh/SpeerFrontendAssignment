@@ -9,18 +9,23 @@ import image3 from "../assets/Hero_Image3.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 class Herosection extends React.Component {
   state = {
-    x: "0px",
-    y: "0px",
+    x: 0,
+    y: 0,
   };
 
   handleMove = (e) => {
     const btn = document.getElementsByClassName("button")[0];
+    console.log(btn)
 
-    var x = e.pageX - e.target.offsetLeft;
-    var y = e.pageY - e.target.offsetTop;
+    var x = e.screenX;
+    var y = e.screenY;
+
+    btn.style.setProperty('--x', x + 'px');
+    btn.style.setProperty('--y', y + 'px');
 
     //btn.setAttribute("style", "--x:" + x + "px; --y:" + y + "px;");
   };
+  
 
   render() {
     return (
@@ -28,9 +33,9 @@ class Herosection extends React.Component {
         <div style={{ position: "relative" }}>
           <div className="burger">
             <GiHamburgerMenu
-              style={{ marginTop: "-15px", height: "30px", width: "auto" }}
+              className="hamburgermenu"
             />
-            <h2 style={{ display: "inline-block" }}> &nbsp;EXP | CON</h2>
+            <h2 className="heroName"> &nbsp;EXP | CON</h2>
           </div>
           <div className="hero-center">
             <h1>INTERACTIVE CONCERT EXPERIENCE</h1>
@@ -42,7 +47,7 @@ class Herosection extends React.Component {
               TRY IT NOW
             </button>
           </div>
-          <Carousel style={{ maxHeight: "100vh" }}>
+          <Carousel className="carouselHero">
             <Carousel.Item
               interval={1000}
               className="justify-content-md-center"
