@@ -104,7 +104,7 @@ height: 79px;
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  background: radial-gradient(circle closest-side,#1FE1E9, transparent);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   transition: width .2s ease, height .2s ease;

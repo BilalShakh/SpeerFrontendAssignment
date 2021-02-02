@@ -8,22 +8,16 @@ import image3 from "../assets/Hero_Image3.png";
 // reactstrap components
 import { GiHamburgerMenu } from "react-icons/gi";
 class Herosection extends React.Component {
-  state = {
-    x: 0,
-    y: 0,
-  };
 
+  //Handles hover on the CTA button
   handleMove = (e) => {
     const btn = document.getElementsByClassName("button")[0];
-    console.log(btn)
 
-    var x = e.screenX;
-    var y = e.screenY;
+    var x = e.pageX-btn.offsetLeft;
+    var y = e.pageY-btn.getBoundingClientRect().top;
 
     btn.style.setProperty('--x', x + 'px');
     btn.style.setProperty('--y', y + 'px');
-
-    //btn.setAttribute("style", "--x:" + x + "px; --y:" + y + "px;");
   };
   
 
@@ -47,9 +41,8 @@ class Herosection extends React.Component {
               TRY IT NOW
             </button>
           </div>
-          <Carousel className="carouselHero">
+          <Carousel className="carouselHero" interval={10000}>
             <Carousel.Item
-              interval={1000}
               className="justify-content-md-center"
             >
               <img
@@ -58,7 +51,7 @@ class Herosection extends React.Component {
                 alt="First slide"
               />
             </Carousel.Item>
-            <Carousel.Item interval={500}>
+            <Carousel.Item >
               <img
                 className="d-block w-100 carousel-img"
                 src={image2}
