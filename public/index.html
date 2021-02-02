@@ -49,9 +49,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>document.querySelector('.button').onmousemove = function (e) {
-
+      console.log(e.pageX,e.pageY);
       var x = e.pageX - e.target.offsetLeft;
       var y = e.pageY - e.target.offsetTop;
+
+      
     
       e.target.style.setProperty('--x', x + 'px');
       e.target.style.setProperty('--y', y + 'px');

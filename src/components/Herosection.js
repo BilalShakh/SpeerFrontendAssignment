@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import { Button } from "react-bootstrap";
+
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import image1 from "../assets/Hero_Image1.png";
@@ -19,7 +19,7 @@ class Herosection extends React.Component {
     var x = e.pageX - e.target.offsetLeft;
     var y = e.pageY - e.target.offsetTop;
 
-    btn.setAttribute("style", "--x:" + x + "px; --y:" + y + "px;");
+    //btn.setAttribute("style", "--x:" + x + "px; --y:" + y + "px;");
   };
 
   render() {

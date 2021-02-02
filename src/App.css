@@ -112,14 +112,14 @@ height: 79px;
 
 
 .button:hover::before {
-  --size: 400px;
+  --size: 200px;
 
 }
 
 .burger {
   position:absolute;
   top: 86px;
-left: 83px;
+  left: 83px;
 
   z-index: 99;
   color:white;
