@@ -25,12 +25,6 @@ class Herosection extends React.Component {
     return (
       <>
         <div style={{ position: "relative" }}>
-          <div className="burger">
-            <GiHamburgerMenu
-              className="hamburgermenu"
-            />
-            <h2 className="heroName"> &nbsp;EXP | CON</h2>
-          </div>
           <div className="hero-center">
             <h1>INTERACTIVE CONCERT EXPERIENCE</h1>
             <p style={{ fontSize: "20px", letterSpacing: "3px" }}>
@@ -58,7 +52,7 @@ class Herosection extends React.Component {
                 alt="Second slide"
               />
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item interval={10000}>
               <img
                 className="d-block w-100 carousel-img "
                 src={image3}

@@ -123,25 +123,6 @@ font-weight:bold;
 
 }
 
-.burger {
-  position:absolute;
-  top: 86px;
-  left: 83px;
-
-  z-index: 99;
-  color:white;
- 
-}
-
-.hamburgermenu {
-  margin-top: -15px;
-  height: 30px; 
-  width: auto;
-}
-
-.heroName {
-  display: inline-block;
-}
 
 .carouselHero {
   maxHeight: 100vh
@@ -245,7 +226,8 @@ font-weight:bold;
   opacity: 1;
 }
 
-.red-company-title {
+.main-company-title {
+  z-index: 1;
   position: absolute;
   top: 99px;
   left: 177px;
@@ -256,10 +238,31 @@ font-weight:bold;
   opacity: 1;
 }
 
-.red-icon {
+.main-icon {
+  z-index: 1;
   position: absolute;
   top: 103px;
   left: 95px;
   opacity: 1;
   color: #FFFFFF;
+}
+
+.red-demo-button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side,#D1346E, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+
+
+.red-demo-button:hover::before {
+  --size: 200px;
+
 }

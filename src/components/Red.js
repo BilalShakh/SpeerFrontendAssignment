@@ -1,8 +1,6 @@
 import React from "react";
 import speaker1 from '../assets/speaker1.png'
 import speaker2 from '../assets/speaker2.png'
-import { Icon } from '@iconify/react';
-import baselineDehaze from '@iconify-icons/ic/baseline-dehaze';
 import "../App.css"
 
 class Red extends React.Component {
@@ -10,9 +8,11 @@ class Red extends React.Component {
     //Handles hover on the CTA button
     handleMove = (e) => {
         const btn = document.getElementsByClassName("red-try-button")[0];
+        
 
         var x = e.pageX-btn.offsetLeft;
         var y = e.pageY-btn.getBoundingClientRect().top;
+        console.log(x,y)
 
         btn.style.setProperty('--x', x + 'px');
         btn.style.setProperty('--y', y + 'px');
@@ -48,10 +48,7 @@ class Red extends React.Component {
                     TRY IT NOW
                 </p>
             </button>
-            <p className="red-company-title">
-                EXP|CON
-            </p>
-            <Icon icon={baselineDehaze} className="red-icon" width="56" />
+            
         </div>
       </>
     );
