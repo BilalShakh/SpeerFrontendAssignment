@@ -6,8 +6,7 @@ import image1 from "../assets/Hero_Image1.png";
 import image2 from "../assets/Hero_Image2.png";
 import image3 from "../assets/Hero_Image3.png";
 import "../App.css"
-// reactstrap components
-import { GiHamburgerMenu } from "react-icons/gi";
+
 class Herosection extends React.Component {
 
   //Handles hover on the CTA button
@@ -25,7 +24,7 @@ class Herosection extends React.Component {
   render() {
     return (
       <>
-        <div style={{ position: "relative" }}>
+        <div style={{position:"relative"}}>
           <h1 className="hero-title">INTERACTIVE CONCERT EXPERIENCE</h1>
           <p className="hero-descrip">
            Experience your favourite artists like never before and from the comfort of your own home
@@ -42,21 +41,18 @@ class Herosection extends React.Component {
               <img
                 className="d-block w-100 carousel-img"
                 src={image1}
-                alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100 carousel-img"
                 src={image2}
-                alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item interval={10000}>
               <img
                 className="d-block w-100 carousel-img "
                 src={image3}
-                alt="Third slide"
               />
             </Carousel.Item>
           </Carousel>
