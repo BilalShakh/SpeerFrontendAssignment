@@ -5,6 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import image1 from "../assets/Hero_Image1.png";
 import image2 from "../assets/Hero_Image2.png";
 import image3 from "../assets/Hero_Image3.png";
+import "../App.css"
 // reactstrap components
 import { GiHamburgerMenu } from "react-icons/gi";
 class Herosection extends React.Component {
@@ -25,16 +26,15 @@ class Herosection extends React.Component {
     return (
       <>
         <div style={{ position: "relative" }}>
-          <div className="hero-center">
-            <h1>INTERACTIVE CONCERT EXPERIENCE</h1>
-            <p style={{ fontSize: "20px", letterSpacing: "3px" }}>
-              Experience your favourite artists like never <br />
-              before and from the comfort of your own home
-            </p>
-            <button onMouseMove={this.handleMove} className="button">
+          <h1 className="hero-title">INTERACTIVE CONCERT EXPERIENCE</h1>
+          <p className="hero-descrip">
+           Experience your favourite artists like never before and from the comfort of your own home
+          </p>
+          <button className="hero-try-button">
+            <p className="hero-try-button-text">
               TRY IT NOW
-            </button>
-          </div>
+            </p>
+          </button>
           <Carousel className="carouselHero" interval={10000}>
             <Carousel.Item
               className="justify-content-md-center"

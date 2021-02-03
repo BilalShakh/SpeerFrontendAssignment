@@ -7,7 +7,7 @@ class Red extends React.Component {
 
     //Handles hover on the CTA button
     handleMove = (e) => {
-        const btn = document.getElementsByClassName("red-try-button")[0];
+        const btn = document.getElementsByClassName("red-demo-button")[0];
         
 
         var x = e.pageX-btn.offsetLeft;
